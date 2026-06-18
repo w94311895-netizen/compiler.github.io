@@ -20,7 +20,7 @@
   <meta property="og:title" content="YBY Compiler Blog - Learn Python">
   <meta property="og:description" content="Learn Python with comprehensive tutorials and projects.">
   <meta property="og:url" content="https://ybycompiler.netlify.app/blog.html">
-  <link rel="stylesheet" href="styles.css?v=20260616">
+  <link rel="stylesheet" href="styles.css?v=20260618">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,18 +38,23 @@
 </head>
 
 <body>
-<div class="site-shell">
-  <header style="padding: 30px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
-    <a href="index.html" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 20px;">
-      <h1 style="margin: 0;">📚 Python Learning Hub</h1>
+<div class="site-shell blog-page">
+  <nav class="topbar blog-topbar" aria-label="Blog navigation">
+    <a class="brand" href="index.html#editor" aria-label="Open YBY Compiler editor">
+      <span class="brand-mark">Y</span>
+      <span class="brand-copy"><strong>YBY Compiler</strong><small>Open editor</small></span>
     </a>
-    <p style="margin: 10px 0;">Master Python programming with comprehensive tutorials and hands-on projects</p>
+    <a class="button button-secondary" href="index.html#editor">Open Compiler</a>
+  </nav>
+
+  <header class="blog-hero">
+    <h1>📚 Python Learning Hub</h1>
+    <p>Master Python programming with comprehensive tutorials and hands-on projects</p>
   </header>
 
   <!-- SEARCH BAR -->
-  <div style="padding: 20px;">
-    <input type="text" id="searchInput" placeholder="🔍 Search tutorials..."
-      style="width:100%; max-width:600px; padding:12px 15px; border-radius:10px; border:2px solid #ddd; font-size:16px;">
+  <div class="blog-search">
+    <input type="text" id="searchInput" placeholder="🔍 Search tutorials...">
   </div>
 
   <!-- BLOG GRID -->
@@ -142,7 +147,7 @@
   <div class="ready-section">
     <h2>Ready to Practice?</h2>
     <p>Use the YBY Compiler to run all the examples from these tutorials.</p>
-    <a href="index.html#compiler" class="button button-primary">Open Compiler →</a>
+    <a href="index.html#editor" class="button button-primary">Open Compiler →</a>
   </div>
 
 </div>
@@ -166,12 +171,12 @@ searchInput.addEventListener("keyup", () => {
 
 cards.forEach(card => {
   card.addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-5px)';
-    this.style.boxShadow = '0 8px 12px rgba(0,0,0,0.15)';
+    this.style.transform = 'translateY(-4px)';
+    this.style.boxShadow = '0 12px 22px rgba(0,0,0,0.22)';
   });
   card.addEventListener('mouseleave', function() {
     this.style.transform = 'translateY(0)';
-    this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+    this.style.boxShadow = '';
   });
 });
 </script>
