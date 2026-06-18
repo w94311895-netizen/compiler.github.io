@@ -4,6 +4,7 @@ Allow: /*.html
 Allow: /python-*.html
 Disallow: /netlify/
 Disallow: /admin/
+Disallow: /ai-generator.html
 
 Sitemap: https://ybycompiler.netlify.app/sitemap.xml
 
