@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="YBY Compiler">
+  <meta name="google-adsense-account" content="ca-pub-8709136418584975">
+  <meta name="description" content="Learn how to understand and fix common Python errors including SyntaxError, NameError, TypeError, ValueError, IndentationError, and FileNotFoundError.">
+  <meta name="keywords" content="Python errors, fix Python SyntaxError, Python NameError, Python TypeError, Python beginner debugging, YBY Compiler">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
+  <link rel="canonical" href="https://ybycompiler.netlify.app/python-errors.html">
+  <title>Common Python Errors and Fixes | YBY Compiler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260616">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Common Python Errors and Fixes",
+    "description": "A beginner-friendly guide to common Python errors and how to fix them.",
+    "author": {"@type": "Organization", "name": "YBY Compiler"},
+    "publisher": {"@type": "Organization", "name": "YBY Compiler"},
+    "mainEntityOfPage": "https://ybycompiler.netlify.app/python-errors.html"
+  }
+  </script>
+</head>
+<body>
+  <div class="live-wallpaper" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <main class="blog-container legal-page card" style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+    <p class="eyebrow">Python debugging</p>
+    <h1>Common Python Errors and Fixes</h1>
+    <p class="section-text">Use this guide when YBY Compiler or Python shows an error message. Start with the first error line, check the line number, then compare the message with the explanation below.</p>
+
+    <h2>SyntaxError</h2>
+    <p>A <strong>SyntaxError</strong> means Python could not understand the structure of your code. Check for missing colons, brackets, commas, quotes, or parentheses.</p>
+    <pre>if score >= 50
+    print("Pass")</pre>
+    <p>Fix it by adding the missing colon:</p>
+    <pre>if score >= 50:
+    print("Pass")</pre>
+
+    <h2>IndentationError</h2>
+    <p>An <strong>IndentationError</strong> means spaces are not aligned correctly. Code inside loops, functions, and if-statements must be indented consistently.</p>
+    <pre>for number in range(3):
+print(number)</pre>
+    <p>Fix it by indenting the body:</p>
+    <pre>for number in range(3):
+    print(number)</pre>
+
+    <h2>NameError</h2>
+    <p>A <strong>NameError</strong> means a variable or function name was used before it was created, or the spelling does not match.</p>
+    <pre>print(total)
+total = 10</pre>
+    <p>Fix it by defining the value before using it:</p>
+    <pre>total = 10
+print(total)</pre>
+
+    <h2>TypeError</h2>
+    <p>A <strong>TypeError</strong> means incompatible data types were used together, such as adding text directly to a number.</p>
+    <pre>age = 12
+print("Age: " + age)</pre>
+    <p>Fix it by converting the number to text or by using an f-string:</p>
+    <pre>age = 12
+print(f"Age: {age}")</pre>
+
+    <h2>ValueError</h2>
+    <p>A <strong>ValueError</strong> means Python received the right type of value, but the value itself is not valid for the operation.</p>
+    <pre>number = int("hello")</pre>
+    <p>Fix it by validating input before converting:</p>
+    <pre>text = "42"
+if text.isdigit():
+    number = int(text)
+    print(number)</pre>
+
+    <h2>FileNotFoundError</h2>
+    <p>A <strong>FileNotFoundError</strong> means Python cannot find the file path. In YBY Compiler, upload the file, click <strong>Attach to Python</strong>, then use the exact path shown under the upload.</p>
+    <pre>import pandas as pd
+
+df = pd.read_csv("/home/pyodide/data/my-file.csv")
+print(df.head())</pre>
+
+    <h2>Debugging checklist</h2>
+    <ul class="check-list">
+      <li>Read the first error line before reading the rest of the traceback.</li>
+      <li>Check the line number mentioned in the output console.</li>
+      <li>Look for spelling differences in variable names.</li>
+      <li>Check indentation after <code>if</code>, <code>for</code>, <code>while</code>, <code>def</code>, and <code>class</code>.</li>
+      <li>If your program reads a file, attach the file first and use the <code>/home/pyodide/data/</code> path.</li>
+    </ul>
+
+    <div style="padding: 30px 20px; text-align: center; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); margin: 30px 0; border-radius: 10px;">
+      <div class="card ad-card" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8709136418584975"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+
+    <p><a href="index.html#compiler" class="button button-primary">Try the Compiler</a></p>
+    <p><a href="blog.html" class="back-link">← Back to Blog</a></p>
+    <p><a href="index.html" class="back-link">← Back to Home</a></p>
+  </main>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

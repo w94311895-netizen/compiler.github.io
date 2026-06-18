@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete guide to Python data types: integers, floats, strings, lists, dictionaries, sets, and tuples with examples">
+    <meta name="google-adsense-account" content="ca-pub-8709136418584975">
+    <meta name="keywords" content="python data types, python int, python string, python list, python dictionary, python tuple">
+    <title>Python Data Types Guide | YBY Compiler</title>
+    <link rel="canonical" href="https://ybycompiler.netlify.app/python-datatypes-guide.html">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Python Data Types Guide - Complete Tutorial",
+      "description": "Learn all Python data types with practical examples",
+      "author": {"@type": "Organization", "name": "YBY Compiler"},
+      "datePublished": "2026-06-18"
+    }
+    </script>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="index.html" class="back-link">← Back to Compiler</a>
+        <article class="tutorial-article">
+            <h1>Python Data Types: Complete Guide</h1>
+            <p class="article-meta">Last updated: June 18, 2026 | Reading time: 8 minutes</p>
+
+            <section>
+                <h2>Introduction to Python Data Types</h2>
+                <p>Python provides several built-in data types for storing and manipulating data. Understanding these types is fundamental to writing effective Python code. Each type has specific characteristics and methods.</p>
+            </section>
+
+            <section>
+                <h2>1. Numeric Types</h2>
+                
+                <h3>Integers (int)</h3>
+                <p>Integers are whole numbers without decimal points. Python supports arbitrarily large integers.</p>
+                <pre><code>age = 25
+temperature = -10
+big_number = 123456789012345678901234567890
+print(type(age))  # &lt;class 'int'&gt;
+print(age + 5)    # 30</code></pre>
+
+                <h3>Floats (float)</h3>
+                <p>Floats represent decimal numbers. Use them for precise calculations involving decimals.</p>
+                <pre><code>price = 19.99
+percentage = 0.75
+scientific = 1.5e-3  # Scientific notation
+print(type(price))    # &lt;class 'float'&gt;
+print(price * 2)      # 39.98</code></pre>
+
+                <h3>Complex Numbers</h3>
+                <p>Python natively supports complex numbers for mathematical operations.</p>
+                <pre><code>z = 3 + 4j
+print(z.real)      # 3.0
+print(z.imag)      # 4.0
+print(z.conjugate())  # (3-4j)</code></pre>
+            </section>
+
+            <section>
+                <h2>2. String Type (str)</h2>
+                <p>Strings are sequences of characters used for text data. They're immutable and support many operations.</p>
+                <pre><code>name = "Python"
+greeting = 'Hello, World!'
+multiline = """This is
+a multiline
+string"""
+
+# String operations
+print(name.lower())        # python
+print(name.upper())        # PYTHON
+print(name[0])             # P
+print(len(name))           # 6
+print(name * 2)            # PythonPython
+print("Py" in name)        # True</code></pre>
+            </section>
+
+            <section>
+                <h2>3. Sequence Types</h2>
+
+                <h3>Lists (list)</h3>
+                <p>Lists are ordered, mutable collections that can store multiple data types.</p>
+                <pre><code>fruits = ["apple", "banana", "cherry"]
+mixed = [1, "hello", 3.14, True]
+
+# List operations
+fruits.append("date")           # Add item
+fruits.remove("banana")         # Remove item
+print(fruits[0])                # Access first item
+print(fruits[-1])               # Access last item
+print(len(fruits))              # Get length
+print(fruits[:2])               # Slice first 2 items</code></pre>
+
+                <h3>Tuples (tuple)</h3>
+                <p>Tuples are ordered, immutable collections. Use them when data shouldn't change.</p>
+                <pre><code>coordinates = (10, 20)
+rgb = (255, 128, 0)
+
+print(coordinates[0])     # 10
+print(len(coordinates))   # 2
+a, b = coordinates        # Unpacking
+print(a, b)               # 10 20</code></pre>
+            </section>
+
+            <section>
+                <h2>4. Set Types</h2>
+
+                <h3>Sets (set)</h3>
+                <p>Sets are unordered collections of unique items. Great for removing duplicates.</p>
+                <pre><code>colors = {"red", "green", "blue"}
+numbers = {1, 2, 2, 3, 3, 3}  # Duplicates removed
+
+print(numbers)                    # {1, 2, 3}
+colors.add("yellow")             # Add item
+colors.remove("red")             # Remove item
+print("blue" in colors)           # True</code></pre>
+            </section>
+
+            <section>
+                <h2>5. Dictionaries</h2>
+                <p>Dictionaries store key-value pairs and are highly efficient for data lookup.</p>
+                <pre><code>person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person["name"])         # Alice
+print(person.get("age"))      # 30
+person["email"] = "alice@example.com"  # Add item</code></pre>
+            </section>
+
+            <section>
+                <h2>Practice Exercises</h2>
+                <ol>
+                    <li>Create a list of your favorite books and print the first and last one</li>
+                    <li>Use a dictionary to store information about your favorite movie</li>
+                    <li>Convert a temperature from Celsius to Fahrenheit (use floats)</li>
+                    <li>Find duplicate numbers in a list by converting it to a set</li>
+                </ol>
+            </section>
+
+            <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                <h3>Try it in the Compiler</h3>
+                <p>All the code examples above can be run directly in <a href="index.html">YBY Compiler</a>. Just copy, paste, and click "Run Code" to test these data types interactively.</p>
+            </div>
+        </article>
+
+        <a href="index.html" class="back-link">← Back to Compiler</a>
+    </div>
+</body>
+</html>

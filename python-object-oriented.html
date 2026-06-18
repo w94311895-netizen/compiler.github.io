@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Object-Oriented Programming in Python: classes, objects, inheritance, polymorphism with practical examples">
+    <meta name="google-adsense-account" content="ca-pub-8709136418584975">
+    <meta name="keywords" content="python oop, python classes, python inheritance, python objects, object oriented programming">
+    <title>Python OOP Tutorial | Classes and Objects | YBY Compiler</title>
+    <link rel="canonical" href="https://ybycompiler.netlify.app/python-object-oriented.html">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Python Object-Oriented Programming (OOP) Complete Tutorial",
+      "description": "Master OOP concepts in Python with real-world examples",
+      "author": {"@type": "Organization", "name": "YBY Compiler"},
+      "datePublished": "2026-06-18"
+    }
+    </script>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="index.html" class="back-link">← Back to Compiler</a>
+        <article class="tutorial-article">
+            <h1>Python Object-Oriented Programming (OOP) Tutorial</h1>
+            <p class="article-meta">Last updated: June 18, 2026 | Reading time: 12 minutes</p>
+
+            <section>
+                <h2>What is Object-Oriented Programming?</h2>
+                <p>Object-Oriented Programming (OOP) is a programming paradigm that organizes code around objects and classes. It helps create modular, reusable, and maintainable code.</p>
+            </section>
+
+            <section>
+                <h2>1. Classes and Objects</h2>
+                <p>A class is a blueprint for creating objects. An object is an instance of a class.</p>
+                <pre><code>class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        print(f"{self.name} says: Woof!")
+
+# Create objects
+dog1 = Dog("Buddy", 3)
+dog2 = Dog("Max", 5)
+
+dog1.bark()      # Buddy says: Woof!
+print(dog1.name) # Buddy</code></pre>
+            </section>
+
+            <section>
+                <h2>2. Attributes and Methods</h2>
+                <p>Attributes are variables that belong to an object. Methods are functions that belong to a class.</p>
+                <pre><code>class Car:
+    def __init__(self, brand, model, year):
+        # Attributes
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.speed = 0
+    
+    def accelerate(self, amount):
+        self.speed += amount
+        print(f"Speed: {self.speed} km/h")
+    
+    def brake(self):
+        self.speed = 0
+        print("Car stopped")
+    
+    def info(self):
+        return f"{self.year} {self.brand} {self.model}"
+
+car = Car("Toyota", "Camry", 2022)
+print(car.info())          # 2022 Toyota Camry
+car.accelerate(50)         # Speed: 50 km/h
+car.brake()                # Car stopped</code></pre>
+            </section>
+
+            <section>
+                <h2>3. Inheritance</h2>
+                <p>Inheritance allows a class to inherit attributes and methods from another class.</p>
+                <pre><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} barks: Woof!")
+
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} meows: Meow!")
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+dog.speak()    # Buddy barks: Woof!
+cat.speak()    # Whiskers meows: Meow!</code></pre>
+            </section>
+
+            <section>
+                <h2>4. Polymorphism</h2>
+                <p>Polymorphism allows objects to take multiple forms.</p>
+                <pre><code>class Shape:
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def area(self):
+        return self.width * self.height
+
+shapes = [Circle(5), Rectangle(4, 6)]
+for shape in shapes:
+    print(f"Area: {shape.area()}")</code></pre>
+            </section>
+
+            <section>
+                <h2>5. Practical Example: Library System</h2>
+                <pre><code>class Book:
+    def __init__(self, title, author, isbn):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        self.available = True
+    
+    def __str__(self):
+        return f"{self.title} by {self.author}"
+
+class Library:
+    def __init__(self):
+        self.books = []
+    
+    def add_book(self, book):
+        self.books.append(book)
+    
+    def borrow_book(self, isbn):
+        for book in self.books:
+            if book.isbn == isbn and book.available:
+                book.available = False
+                return f"You borrowed: {book}"
+        return "Book not available"
+
+# Usage
+library = Library()
+book1 = Book("Python 101", "John Doe", "001")
+library.add_book(book1)
+print(library.borrow_book("001"))  # You borrowed: Python 101 by John Doe</code></pre>
+            </section>
+
+            <section>
+                <h2>Key Concepts Summary</h2>
+                <ul style="font-size: 16px; line-height: 1.8;">
+                    <li><strong>Class:</strong> Blueprint for creating objects</li>
+                    <li><strong>Object:</strong> Instance of a class</li>
+                    <li><strong>Attribute:</strong> Variable belonging to an object</li>
+                    <li><strong>Method:</strong> Function belonging to a class</li>
+                    <li><strong>Inheritance:</strong> Creating classes from other classes</li>
+                    <li><strong>Polymorphism:</strong> Objects taking multiple forms</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Practice Exercises</h2>
+                <ol>
+                    <li>Create a Student class with name, ID, and GPA</li>
+                    <li>Create an Employee class and a Manager subclass</li>
+                    <li>Build a simple game character system</li>
+                    <li>Create a product inventory system</li>
+                </ol>
+            </section>
+
+            <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                <h3>Try it in the Compiler</h3>
+                <p>Run all the code examples in <a href="index.html">YBY Compiler</a>. Copy any example and test it instantly!</p>
+            </div>
+        </article>
+
+        <a href="index.html" class="back-link">← Back to Compiler</a>
+    </div>
+</body>
+</html>

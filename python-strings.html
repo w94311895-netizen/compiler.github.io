@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="YBY Compiler">
+  <meta name="google-adsense-account" content="ca-pub-8709136418584975">
+  <title>Python Strings - Comprehensive Tutorial</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
+  <link rel="canonical" href="https://ybycompiler.netlify.app/python-strings.html">
+  <link rel="stylesheet" href="styles.css?v=20260616">
+  <meta name="description" content="Master Python strings: learn string creation, manipulation, methods, and formatting.">
+  <meta name="keywords" content="Python strings, text, string methods, formatting, tutorial">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Python Strings - Comprehensive Tutorial",
+    "description": "Learn how to work with Python strings, including creation, manipulation, methods, and formatting.",
+    "author": {"@type": "Organization", "name": "YBY Compiler"},
+    "mainEntityOfPage": "https://ybycompiler.netlify.app/python-strings.html",
+    "datePublished": "2026-06-16"
+  }
+  </script>
+</head>
+<body>
+<div class="blog-container">
+  <div class="tutorial-header">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>📝 Python Strings</h1>
+    <p class="intro-text">Strings are sequences of characters used to store text data. Learn how to create, manipulate, and format strings like a professional.</p>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop" alt="Python Strings Tutorial" style="width:100%; border-radius:10px; margin:20px 0; display:block;">
+
+  <section>
+    <h2>What is a String?</h2>
+    <p>A string is a sequence of characters enclosed in quotes. Strings in Python are:</p>
+    <ul>
+      <li><strong>Immutable:</strong> Cannot be changed after creation (but can be reassigned)</li>
+      <li><strong>Ordered:</strong> Each character has a position (index)</li>
+      <li><strong>Flexible:</strong> Can contain letters, numbers, symbols, and spaces</li>
+      <li><strong>Indexable:</strong> Access characters using their position</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Creating Strings</h2>
+    <pre><code>
+# Single quotes
+name = 'Alice'
+
+# Double quotes
+message = "Hello, World!"
+
+# Triple quotes (multiline)
+poem = '''Roses are red,
+Violets are blue,
+Python is fun,
+And coding is too!'''
+
+# Using escape characters
+quote = "She said, \"Python is awesome!\""
+newline = "Line 1\nLine 2"
+tab = "Column1\tColumn2"
+
+# Empty string
+empty = ""
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Accessing String Characters</h2>
+    <h3>Using Index (Positive)</h3>
+    <pre><code>
+text = "Python"
+
+print(text[0])    # P
+print(text[1])    # y
+print(text[5])    # n
+    </code></pre>
+
+    <h3>Using Negative Index</h3>
+    <pre><code>
+text = "Python"
+
+print(text[-1])   # n (last character)
+print(text[-2])   # o (second from last)
+print(text[-6])   # P (first character)
+    </code></pre>
+
+    <h3>String Slicing</h3>
+    <pre><code>
+text = "Python Programming"
+
+print(text[0:6])     # Python
+print(text[7:])      # Programming
+print(text[:6])      # Python
+print(text[::2])     # Pto rgamn
+print(text[::-1])    # gnimmargorP nohtyP (reversed)
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>String Methods</h2>
+    <h3>Case Methods</h3>
+    <pre><code>
+text = "Hello World"
+
+print(text.upper())        # HELLO WORLD
+print(text.lower())        # hello world
+print(text.capitalize())   # Hello world
+print(text.title())        # Hello World
+print(text.swapcase())     # hELLO wORLD
+    </code></pre>
+
+    <h3>Search and Replace</h3>
+    <pre><code>
+text = "Python is great. Python is fun."
+
+# Find position
+pos = text.find("is")                    # 7
+print(pos if pos != -1 else "Not found")
+
+# Count occurrences
+count = text.count("Python")             # 2
+
+# Replace
+new_text = text.replace("Python", "Java")
+print(new_text)  # Java is great. Java is fun.
+
+# Start and end check
+print(text.startswith("Python"))        # True
+print(text.endswith("fun."))            # True
+    </code></pre>
+
+    <h3>Trimming Whitespace</h3>
+    <pre><code>
+text = "   Hello, World!   "
+
+print(text.strip())      # Hello, World!
+print(text.lstrip())     # Hello, World!   (left trim)
+print(text.rstrip())     #    Hello, World! (right trim)
+    </code></pre>
+
+    <h3>Splitting and Joining</h3>
+    <pre><code>
+# Split string into list
+sentence = "Python is fun and easy"
+words = sentence.split()  # ['Python', 'is', 'fun', 'and', 'easy']
+
+# Split with separator
+csv = "apple,banana,orange"
+fruits = csv.split(",")   # ['apple', 'banana', 'orange']
+
+# Join list into string
+words = ["Python", "is", "awesome"]
+sentence = " ".join(words)  # "Python is awesome"
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>String Formatting</h2>
+    <h3>Method 1: Using % (Old Style)</h3>
+    <pre><code>
+name = "Alice"
+age = 25
+print("Name: %s, Age: %d" % (name, age))
+# Name: Alice, Age: 25
+    </code></pre>
+
+    <h3>Method 2: Using .format()</h3>
+    <pre><code>
+name = "Bob"
+age = 30
+gpa = 3.85
+print("Name: {}, Age: {}, GPA: {}".format(name, age, gpa))
+print("Name: {0}, Age: {1}".format(name, age))
+print("Age: {age}, Name: {name}".format(name=name, age=age))
+    </code></pre>
+
+    <h3>Method 3: Using f-strings (Best)</h3>
+    <pre><code>
+name = "Charlie"
+age = 35
+gpa = 3.92
+print(f"Name: {name}, Age: {age}")
+print(f"GPA: {gpa:.2f}")  # 3.92 (2 decimal places)
+print(f"{name} is {age} years old")
+print(f"Next year: {age + 1}")
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>String Checks</h2>
+    <pre><code>
+text = "Hello123"
+
+print(text.isalpha())           # False (has numbers)
+print(text.isdigit())           # False (has letters)
+print(text.isalnum())           # True (only letters and numbers)
+print(text.isspace())           # False
+print(text.isupper())           # False
+print(text.islower())           # False
+
+# Custom checks
+print("123".isdigit())          # True
+print("abc".isalpha())          # True
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>String Concatenation</h2>
+    <pre><code>
+# Method 1: Using +
+first_name = "John"
+last_name = "Doe"
+full_name = first_name + " " + last_name
+
+# Method 2: Using f-strings
+full_name = f"{first_name} {last_name}"
+
+# Method 3: Using join()
+words = ["Hello", "World"]
+message = " ".join(words)
+
+# Method 4: Using format()
+message = "{} {}".format(first_name, last_name)
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Try It Yourself!</h2>
+    <p>Click the button below to open the YBY Compiler and practice with strings:</p>
+    <a href="index.html#compiler" class="button button-primary">Try Strings in Compiler</a>
+  </section>
+
+  <div style="padding: 30px 20px; text-align: center; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); margin: 30px 0; border-radius: 10px;">
+    <div class="card ad-card" aria-label="Advertisement">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8709136418584975"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+  </div>
+
+  <section class="practice-section">
+    <h2>Practice Exercises</h2>
+    <ol>
+      <li>Create a program that takes a name and prints it in uppercase, lowercase, and title case</li>
+      <li>Write a program to count vowels in a sentence</li>
+      <li>Create a program that reverses a string</li>
+      <li>Write a program that checks if a string is a palindrome</li>
+      <li>Create a program that replaces all spaces with hyphens</li>
+    </ol>
+  </section>
+
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+  <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>

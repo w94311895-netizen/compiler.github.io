@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Best Practices & Tips</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
+  <link rel="stylesheet" href="styles.css?v=20260616">
+  <meta name="description" content="Learn Python best practices and pro tips to write clean, efficient, and professional code.">
+  <meta name="keywords" content="Python tips, best practices, clean code, professional Python">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Python Best Practices & Tips",
+    "description": "Master Python best practices including naming conventions, code organization, and efficiency tips.",
+    "author": {"@type": "Organization", "name": "YBY Compiler"},
+    "datePublished": "2026-06-16"
+  }
+  </script>
+</head>
+<body>
+<div class="blog-container">
+  <div class="tutorial-header">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>💡 Python Tips & Best Practices</h1>
+    <p class="intro-text">Write cleaner, more efficient, and more professional Python code by following these proven best practices and tips.</p>
+  </div>
+
+  <img src="https://source.unsplash.com/800x400/?code,programming" alt="Python Best Practices" style="width:100%; border-radius:10px; margin:20px 0;">
+
+  <section>
+    <h2>1. Use Meaningful Variable Names</h2>
+    <p><strong>Bad:</strong></p>
+    <pre><code>
+a = 25
+b = 30
+c = a + b
+print(c)
+    </code></pre>
+    <p><strong>Good:</strong></p>
+    <pre><code>
+student_age = 25
+class_count = 30
+total = student_age + class_count
+print(total)
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>2. Write Comments and Documentation</h2>
+    <pre><code>
+# Bad - no comments
+def calc(x, y):
+    return x * y + x / y
+
+# Good - clear documentation
+def calculate_student_score(test_score, assignment_score):
+    """
+    Calculate final student score based on test and assignment.
+    
+    Args:
+        test_score: Score on the test (0-100)
+        assignment_score: Score on assignment (0-100)
+    
+    Returns:
+        Average of test and assignment scores
+    """
+    return (test_score + assignment_score) / 2
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>3. Follow PEP 8 Style Guide</h2>
+    <p>PEP 8 is the official Python style guide. Key points:</p>
+    <ul>
+      <li>Use 4 spaces for indentation (not tabs)</li>
+      <li>Maximum line length of 79 characters</li>
+      <li>Use lowercase with underscores for variables (snake_case)</li>
+      <li>Use UPPERCASE for constants</li>
+      <li>Use CamelCase for class names</li>
+    </ul>
+    <pre><code>
+# Good naming conventions
+MAX_STUDENTS = 100
+student_name = "John"
+class_year = 2024
+
+class StudentManager:
+    def get_student_list(self):
+        pass
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>4. Keep Functions Small and Focused</h2>
+    <p><strong>Bad:</strong></p>
+    <pre><code>
+def process_data(data):
+    # Does too many things
+    validated = []
+    for item in data:
+        if item > 0:
+            validated.append(item * 2)
+    result = sum(validated)
+    print(f"Result: {result}")
+    return result
+    </code></pre>
+    <p><strong>Good:</strong></p>
+    <pre><code>
+def validate_positive(data):
+    """Filter positive numbers"""
+    return [item for item in data if item > 0]
+
+def double_values(data):
+    """Double all values"""
+    return [item * 2 for item in data]
+
+def process_data(data):
+    """Main processing function"""
+    validated = validate_positive(data)
+    doubled = double_values(validated)
+    return sum(doubled)
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>5. Use List Comprehensions</h2>
+    <p><strong>Before:</strong></p>
+    <pre><code>
+numbers = [1, 2, 3, 4, 5]
+squared = []
+for num in numbers:
+    squared.append(num ** 2)
+    </code></pre>
+    <p><strong>After:</strong></p>
+    <pre><code>
+numbers = [1, 2, 3, 4, 5]
+squared = [num ** 2 for num in numbers]
+# Or with condition
+even_squared = [num ** 2 for num in numbers if num % 2 == 0]
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>6. Handle Exceptions Properly</h2>
+    <p><strong>Bad:</strong></p>
+    <pre><code>
+try:
+    result = int(user_input) / 0
+except:
+    print("Error")
+    </code></pre>
+    <p><strong>Good:</strong></p>
+    <pre><code>
+try:
+    result = int(user_input) / 0
+except ValueError:
+    print("Invalid number format")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except Exception as e:
+    print(f"Unexpected error: {e}")
+finally:
+    print("Cleanup code here")
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>7. Use Default Arguments Wisely</h2>
+    <pre><code>
+# Good for simple defaults
+def greet(name="Guest"):
+    return f"Hello, {name}!"
+
+print(greet())           # Hello, Guest!
+print(greet("Alice"))    # Hello, Alice!
+
+# Avoid mutable defaults
+# Bad
+def add_item(item, list=[]):
+    list.append(item)
+    return list
+
+# Good
+def add_item(item, list=None):
+    if list is None:
+        list = []
+    list.append(item)
+    return list
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>8. Use Meaningful If/Else Conditions</h2>
+    <p><strong>Bad:</strong></p>
+    <pre><code>
+if user_age >= 18:
+    is_adult = True
+else:
+    is_adult = False
+    </code></pre>
+    <p><strong>Good:</strong></p>
+    <pre><code>
+is_adult = user_age >= 18
+
+# Or for complex logic
+if user_age >= 18 and user_has_license:
+    can_drive = True
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>9. Use Built-in Functions</h2>
+    <pre><code>
+numbers = [3, 1, 4, 1, 5, 9, 2]
+
+# Don't write loops for common tasks
+print(len(numbers))          # Length
+print(sum(numbers))          # Sum
+print(min(numbers))          # Minimum
+print(max(numbers))          # Maximum
+print(sorted(numbers))       # Sorted
+print(set(numbers))          # Unique values
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>10. Test Your Code</h2>
+    <pre><code>
+def calculate_discount(price, discount_percent):
+    """Calculate price after discount"""
+    if price < 0 or discount_percent < 0 or discount_percent > 100:
+        raise ValueError("Invalid input")
+    return price * (1 - discount_percent / 100)
+
+# Test cases
+try:
+    assert calculate_discount(100, 10) == 90
+    assert calculate_discount(50, 50) == 25
+    print("All tests passed!")
+except AssertionError:
+    print("Test failed!")
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>11. Use Context Managers for Files</h2>
+    <p><strong>Bad:</strong></p>
+    <pre><code>
+file = open("data.txt")
+data = file.read()
+file.close()
+    </code></pre>
+    <p><strong>Good:</strong></p>
+    <pre><code>
+with open("data.txt") as file:
+    data = file.read()
+# File automatically closes
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>12. Use Constants for Magic Numbers</h2>
+    <p><strong>Bad:</strong></p>
+    <pre><code>
+if age > 18 and height > 5.5:
+    can_ride = True
+    </code></pre>
+    <p><strong>Good:</strong></p>
+    <pre><code>
+MIN_AGE_REQUIREMENT = 18
+MIN_HEIGHT_REQUIREMENT = 5.5
+
+if age > MIN_AGE_REQUIREMENT and height > MIN_HEIGHT_REQUIREMENT:
+    can_ride = True
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Try It Yourself!</h2>
+    <p>Click the button below to open the YBY Compiler and apply these tips:</p>
+    <a href="index.html#editor" class="button button-primary">Try in Compiler</a>
+  </section>
+
+  <section class="practice-section">
+    <h2>Quick Checklist</h2>
+    <ul>
+      <li>☐ Use meaningful variable names</li>
+      <li>☐ Write comments and docstrings</li>
+      <li>☐ Follow PEP 8 style guide</li>
+      <li>☐ Keep functions small and focused</li>
+      <li>☐ Use list comprehensions</li>
+      <li>☐ Handle exceptions properly</li>
+      <li>☐ Test your code</li>
+      <li>☐ Use context managers for files</li>
+      <li>☐ Avoid magic numbers</li>
+      <li>☐ Use built-in functions</li>
+    </ul>
+  </section>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+</body>
+</html>

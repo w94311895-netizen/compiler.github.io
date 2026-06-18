@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="YBY Compiler">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Python for beginners with simple explanations, code examples, and interactive tutorials. Complete guide to Python fundamentals, variables, loops, functions, and more. Start programming today.">
+  <meta name="keywords" content="learn python, python tutorial, python for beginners, python basics, python guide, beginner programming, free python course, python syntax">
+  <title>Learn Python for Beginners | Complete Guide | YBY Compiler</title>
+  <link rel="canonical" href="https://ybycompiler.netlify.app/learn-python.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260616">
+  <link rel="apple-touch-icon" href="IMG-20260614-WA0005.jpg?v=20260616">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Learn Python for Beginners | YBY Compiler">
+  <meta property="og:description" content="A complete beginner's guide to Python programming. Learn variables, loops, functions, and more with clear explanations and interactive examples.">
+  <meta property="og:image" content="https://ybycompiler.netlify.app/python-concepts.png">
+  <meta property="og:url" content="https://ybycompiler.netlify.app/learn-python.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Learn Python for Beginners: A Complete Guide to Programming",
+    "description": "Complete beginner guide to Python programming fundamentals with examples and interactive practice",
+    "image": "https://ybycompiler.netlify.app/python-concepts.png",
+    "author": {
+      "@type": "Organization",
+      "name": "YBY Compiler"
+    },
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "publisher": {
+      "@type": "Organization",
+      "name": "YBY Compiler"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+  <style>
+    .code-example {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-family: 'JetBrains Mono', monospace;
+      overflow-x: auto;
+      border-left: 4px solid #00d4ff;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .concept-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .concept-card h4 {
+      color: #00d4ff;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">Y</span>
+          <span class="brand-copy"><strong>YBY Compiler</strong></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#blog">Tutorials</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+      <article>
+        <h1>Learn Python for Beginners: A Complete Guide to Programming Fundamentals</h1>
+        
+        <p style="font-size: 18px; color: rgba(255, 255, 255, 0.8); margin-bottom: 30px;">
+          Welcome to the ultimate beginner's guide to Python programming. Whether you've never written a line of code or you're learning to refresh your fundamentals, this comprehensive tutorial guides you step-by-step through core Python concepts. By the end, you'll understand variables, data types, functions, loops, and how to write meaningful programs.
+        </p>
+
+        <div style="background-color: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 8px; margin: 30px 0; border: 1px solid rgba(255, 255, 255, 0.1);">
+          <h2 style="margin-top: 0;">📚 Table of Contents</h2>
+          <ul style="column-count: 2; gap: 20px; line-height: 2;">
+            <li><a href="#what-is-python">What is Python?</a></li>
+            <li><a href="#why-learn-python">Why Learn Python?</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#first-program">Your First Program</a></li>
+            <li><a href="#variables">Variables and Data Types</a></li>
+            <li><a href="#operations">Basic Operations</a></li>
+            <li><a href="#input-output">Input and Output</a></li>
+            <li><a href="#decision-making">Decision Making</a></li>
+            <li><a href="#loops">Loops</a></li>
+            <li><a href="#functions">Functions</a></li>
+            <li><a href="#practice">Practice Tips</a></li>
+          </ul>
+        </div>
+
+        <!-- AdSense Ad Unit 1 -->
+        <div class="adsense-section">
+          <div class="card ad-card" aria-label="Advertisement">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8709136418584975"
+                 data-ad-slot="1111111111"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+
+        <section id="what-is-python">
+          <h2>What is Python?</h2>
+          <p>
+            Python is a high-level, interpreted programming language designed for simplicity and readability. Created in 1989 by Guido van Rossum, Python emphasizes writing clean, understandable code. The name comes from the British comedy group Monty Python, reflecting the creator's philosophy that programming should be fun.
+          </p>
+          <p>
+            Unlike languages like C++ or Java that require extensive syntax rules, Python lets you focus on logic and problem-solving. This makes Python the ideal first programming language for beginners.
+          </p>
+          
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h4>📖 Easy to Read</h4>
+              <p>Python's syntax is clean and intuitive, resembling natural English more than complex programming syntax.</p>
+            </div>
+            <div class="concept-card">
+              <h4>🚀 Versatile</h4>
+              <p>Used for web development, data science, artificial intelligence, automation, and more.</p>
+            </div>
+            <div class="concept-card">
+              <h4>🤝 Strong Community</h4>
+              <p>Millions of developers worldwide share code, libraries, and extensive documentation.</p>
+            </div>
+            <div class="concept-card">
+              <h4>💼 Industry Standard</h4>
+              <p>Used by Google, Netflix, Spotify, Instagram, NASA, and thousands of companies globally.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="why-learn-python">
+          <h2>Why Should You Learn Python?</h2>
+          <p>
+            <strong>Career Opportunities:</strong> Python developers earn competitive salaries. The US Bureau of Labor Statistics projects strong job growth for software developers, and Python skills are highly valued across industries.
+          </p>
+          <p>
+            <strong>Beginner-Friendly Nature:</strong> Unlike C or C++, Python doesn't require complex memory management or type declarations. You focus on programming concepts, not language intricacies.
+          </p>
+          <p>
+            <strong>Industry Relevance:</strong> Companies use Python for data analysis, machine learning, web applications, automation, and scientific research. One language opens many career doors.
+          </p>
+          <p>
+            <strong>Strong Ecosystem:</strong> Python has thousands of libraries. Need to analyze data? Use pandas. Want machine learning? Use TensorFlow. Create web apps? Use Django.
+          </p>
+          <p>
+            <strong>Transfer Skills:</strong> Once you master Python, learning other languages becomes easier. The programming concepts you learn are universal.
+          </p>
+        </section>
+
+        <section id="getting-started">
+          <h2>Getting Started with Python</h2>
+          <p>
+            You have several options to start writing Python code immediately. The easiest? Use YBY Compiler right now in your browser—no installation needed.
+          </p>
+
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h4>🌐 Browser-Based (Easiest)</h4>
+              <p>Use YBY Compiler in your browser. No installation. No configuration. Start coding instantly with immediate feedback.</p>
+            </div>
+            <div class="concept-card">
+              <h4>💻 Local Installation</h4>
+              <p>Download Python from python.org and use a code editor. This is how professional developers work.</p>
+            </div>
+            <div class="concept-card">
+              <h4>☁️ Online IDEs</h4>
+              <p>Replit, Trinket, or Glitch offer online coding environments. Perfect for learning and sharing code.</p>
+            </div>
+          </div>
+
+          <p style="margin-top: 20px;">
+            <strong>Recommendation:</strong> Start with YBY Compiler for learning. You get instant feedback, can create visualizations, and can focus on learning Python without technical setup distractions.
+          </p>
+        </section>
+
+        <!-- AdSense Ad Unit 2 -->
+        <div class="adsense-section">
+          <div class="card ad-card" aria-label="Advertisement">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8709136418584975"
+                 data-ad-slot="2222222222"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+
+        <section id="first-program">
+          <h2>Your First Python Program</h2>
+          <p>
+            Every programmer, from beginners to experts, has written the classic "Hello, World!" program. It's a rite of passage in programming—a simple way to verify your environment works.
+          </p>
+
+          <h3>The Classic "Hello, World!"</h3>
+          <div class="code-example">
+print("Hello, World!")
+          </div>
+
+          <p>
+            Output:
+          </p>
+          <div class="code-example" style="border-left-color: #00c864;">
+Hello, World!
+          </div>
+
+          <p>
+            <strong>Understanding the Code:</strong>
+          </p>
+          <ul>
+            <li><code>print()</code> is a function that displays text to the screen</li>
+            <li>"Hello, World!" is a string (text enclosed in quotes)</li>
+            <li>Parentheses tell Python to execute the function with the text inside</li>
+          </ul>
+
+          <p>
+            Congratulations! You've written your first Python program. This simple achievement represents crossing an important milestone in your programming journey.
+          </p>
+        </section>
+
+        <section id="variables">
+          <h2>Variables and Data Types</h2>
+          <p>
+            Variables are containers that store values. Imagine a variable as a labeled box—you put information inside and retrieve it later. Python automatically determines the type of data you're storing.
+          </p>
+
+          <h3>Creating Variables</h3>
+          <div class="code-example">
+name = "Alice"        # String: text data
+age = 25              # Integer: whole numbers
+height = 5.6          # Float: decimal numbers
+is_student = True     # Boolean: True or False
+          </div>
+
+          <h3>Data Types Explained</h3>
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h4>String (str)</h4>
+              <p>Text data enclosed in quotes. Example: <code>"Hello"</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>Integer (int)</h4>
+              <p>Whole numbers without decimals. Example: <code>42</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>Float (float)</h4>
+              <p>Numbers with decimal points. Example: <code>3.14</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>Boolean (bool)</h4>
+              <p>True or False values for logic. Example: <code>True</code></p>
+            </div>
+          </div>
+
+          <h3>Naming Best Practices</h3>
+          <ul>
+            <li>Use descriptive names: <code>student_age</code> not <code>a</code></li>
+            <li>Use lowercase with underscores between words</li>
+            <li>Don't start with numbers</li>
+            <li>Avoid Python keywords like <code>for</code>, <code>while</code>, <code>if</code></li>
+          </ul>
+        </section>
+
+        <!-- AdSense Ad Unit 3 -->
+        <div class="adsense-section">
+          <div class="card ad-card" aria-label="Advertisement">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8709136418584975"
+                 data-ad-slot="3333333333"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+
+        <section id="operations">
+          <h2>Basic Operations and Calculations</h2>
+          <p>
+            Python performs arithmetic operations just like a calculator. This is one of programming's most useful features—automating calculations and data manipulation.
+          </p>
+
+          <h3>Arithmetic Operators</h3>
+          <div class="code-example">
+# Addition
+total = 10 + 5           # Result: 15
+
+# Subtraction
+difference = 20 - 8      # Result: 12
+
+# Multiplication
+product = 6 * 7          # Result: 42
+
+# Division
+quotient = 20 / 4        # Result: 5.0
+
+# Floor Division
+floor_result = 20 // 3   # Result: 6
+
+# Modulo (remainder)
+remainder = 20 % 3       # Result: 2
+
+# Exponentiation (power)
+power = 2 ** 3           # Result: 8
+          </div>
+
+          <h3>Working with Strings</h3>
+          <div class="code-example">
+first_name = "John"
+last_name = "Doe"
+full_name = first_name + " " + last_name
+print(full_name)         # Output: John Doe
+
+greeting = "Hello " * 3
+print(greeting)          # Output: Hello Hello Hello
+          </div>
+        </section>
+
+        <section id="input-output">
+          <h2>Input and Output: Making Programs Interactive</h2>
+          <p>
+            The <code>input()</code> function pauses your program and waits for the user to type something. This makes programs interactive instead of one-directional.
+          </p>
+
+          <h3>Getting User Input</h3>
+          <div class="code-example">
+name = input("What is your name? ")
+print("Hello, " + name)
+          </div>
+
+          <p>
+            When you run this program:
+          </p>
+          <ol>
+            <li>Python displays: "What is your name? "</li>
+            <li>The program waits for your input</li>
+            <li>Whatever you type is stored in <code>name</code></li>
+            <li>Python prints a personalized greeting</li>
+          </ol>
+
+          <h3>Converting Input Types</h3>
+          <p>
+            The <code>input()</code> function always returns a string. To use numbers, you need to convert them:
+          </p>
+          <div class="code-example">
+age = int(input("How old are you? "))
+next_year = age + 1
+print("Next year you'll be " + str(next_year))
+          </div>
+        </section>
+
+        <!-- AdSense Ad Unit 4 -->
+        <div class="adsense-section">
+          <div class="card ad-card" aria-label="Advertisement">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8709136418584975"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+
+        <section id="decision-making">
+          <h2>Decision Making with If Statements</h2>
+          <p>
+            Programs make decisions based on conditions. "If it's raining, take an umbrella. Otherwise, don't." If statements allow your code to take different paths based on conditions.
+          </p>
+
+          <h3>Simple If Statement</h3>
+          <div class="code-example">
+age = 18
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+          </div>
+
+          <h3>Multiple Conditions with elif</h3>
+          <div class="code-example">
+score = 85
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")
+          </div>
+
+          <h3>Comparison Operators</h3>
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h4>==</h4>
+              <p>Equal to: <code>x == 5</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>!=</h4>
+              <p>Not equal: <code>x != 5</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>&gt;</h4>
+              <p>Greater than: <code>x > 5</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>&lt;</h4>
+              <p>Less than: <code>x < 5</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>&gt;=</h4>
+              <p>Greater or equal: <code>x >= 5</code></p>
+            </div>
+            <div class="concept-card">
+              <h4>&lt;=</h4>
+              <p>Less or equal: <code>x <= 5</code></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="loops">
+          <h2>Loops: Repeating Code Efficiently</h2>
+          <p>
+            Loops let you repeat code multiple times without writing it over and over. Python has two main loop types: <code>for</code> loops and <code>while</code> loops.
+          </p>
+
+          <h3>For Loops: Repeat a Known Number of Times</h3>
+          <div class="code-example">
+# Print numbers 0 to 4
+for i in range(5):
+    print("Number: " + str(i))
+
+# Output:
+# Number: 0
+# Number: 1
+# Number: 2
+# Number: 3
+# Number: 4
+          </div>
+
+          <h3>While Loops: Repeat Until Condition is False</h3>
+          <div class="code-example">
+count = 0
+while count < 5:
+    print("Count: " + str(count))
+    count = count + 1
+          </div>
+
+          <h3>Looping Through Lists</h3>
+          <div class="code-example">
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+for fruit in fruits:
+    print("I like " + fruit)
+          </div>
+        </section>
+
+        <!-- AdSense Ad Unit 5 -->
+        <div class="adsense-section">
+          <div class="card ad-card" aria-label="Advertisement">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8709136418584975"
+                 data-ad-slot="4444444444"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+
+        <section id="functions">
+          <h2>Functions: Writing Reusable Code</h2>
+          <p>
+            Functions are blocks of reusable code that perform specific tasks. Define it once and call it as many times as needed. This keeps code clean, organized, and maintainable.
+          </p>
+
+          <h3>Creating and Calling Functions</h3>
+          <div class="code-example">
+def greet(name):
+    print("Hello, " + name + "!")
+
+# Call the function
+greet("Alice")     # Output: Hello, Alice!
+greet("Bob")       # Output: Hello, Bob!
+          </div>
+
+          <h3>Functions with Return Values</h3>
+          <div class="code-example">
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+total = add_numbers(5, 3)
+print("Sum: " + str(total))   # Output: Sum: 8
+          </div>
+
+          <h3>Best Practices for Functions</h3>
+          <ul>
+            <li>Use descriptive function names that explain what the function does</li>
+            <li>Keep functions focused on a single task</li>
+            <li>Use parameters for input instead of hardcoding values</li>
+            <li>Return results instead of just printing them</li>
+            <li>Add comments explaining complex logic</li>
+          </ul>
+        </section>
+
+        <section id="practice">
+          <h2>Practice Tips for Python Beginners</h2>
+          <p>
+            <strong>1. Start Small and Simple:</strong> Don't try to build complex applications on day one. Master fundamentals first, then gradually add complexity.
+          </p>
+          <p>
+            <strong>2. Break Problems Down:</strong> Divide big problems into smaller steps. Code each step one at a time.
+          </p>
+          <p>
+            <strong>3. Use Descriptive Names:</strong> Write <code>student_age</code> instead of <code>a</code>. This improves code clarity.
+          </p>
+          <p>
+            <strong>4. Add Comments:</strong> Explain what and why your code does things. Your future self will thank you.
+          </p>
+          <p>
+            <strong>5. Test Frequently:</strong> Run your code often with different inputs to find bugs early.
+          </p>
+          <p>
+            <strong>6. Learn from Errors:</strong> Read error messages carefully—they tell you exactly what's wrong.
+          </p>
+          <p>
+            <strong>7. Practice Regularly:</strong> 15 minutes every day beats 3 hours once a week. Consistency builds expertise.
+          </p>
+          <p>
+            <strong>8. Build Projects:</strong> Apply skills by building calculators, to-do lists, or guessing games. Learning by doing is most effective.
+          </p>
+          <p>
+            <strong>9. Join Communities:</strong> Connect with other learners on Reddit, Discord, or Facebook groups.
+          </p>
+          <p>
+            <strong>10. Celebrate Progress:</strong> Every expert started at zero. Celebrate your learning journey!
+          </p>
+        </section>
+
+        <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 200, 100, 0.1)); padding: 40px; border-radius: 8px; margin: 50px 0; text-align: center; border: 1px solid rgba(0, 212, 255, 0.3);">
+          <h3 style="margin-top: 0;">🚀 Ready to Practice?</h3>
+          <p style="font-size: 18px; margin: 20px 0;">Try all these examples in YBY Compiler right now. Write code, see it run instantly, and learn by doing.</p>
+          <a href="index.html#editor" class="button button-primary" style="display: inline-block; padding: 12px 30px; font-size: 16px;">Open Compiler & Start Coding →</a>
+        </div>
+      </article>
+
+      <!-- Final AdSense Unit -->
+      <div class="adsense-section">
+        <div class="card ad-card" aria-label="Advertisement">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709136418584975" crossorigin="anonymous"></script>
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-8709136418584975"
+               data-ad-slot="5555555555"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+
+      <footer style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+        <p style="margin: 10px 0;">
+          <a href="index.html" style="color: #00d4ff; text-decoration: none;">Home</a> | 
+          <a href="index.html#blog" style="color: #00d4ff; text-decoration: none;">Tutorials</a> | 
+          <a href="about.html" style="color: #00d4ff; text-decoration: none;">About</a> | 
+          <a href="privacy.html" style="color: #00d4ff; text-decoration: none;">Privacy</a> | 
+          <a href="contact.html" style="color: #00d4ff; text-decoration: none;">Contact</a>
+        </p>
+        <p style="margin-top: 20px; opacity: 0.7; font-size: 14px;">© 2026 YBY Compiler. Making programming education accessible worldwide.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>
