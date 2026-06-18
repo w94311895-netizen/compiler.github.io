@@ -613,6 +613,23 @@ pre {
   padding: 22px;
 }
 
+.ready-section {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px 20px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 100%
+  );
+}
+
+.ready-section .button {
+  display: inline-block;
+  margin-top: 15px;
+}
+
 .back-link {
   color: var(--accent-soft);
 }
