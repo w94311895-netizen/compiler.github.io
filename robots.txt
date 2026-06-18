@@ -1,27 +1,14 @@
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /about.html
-Allow: /contact.html
-Allow: /privacy.html
-Allow: /terms.html
-Allow: /blog.html
-Allow: /learn-python.html
 Allow: /*.html
 Allow: /python-*.html
 Disallow: /netlify/
-Disallow: /*.js$
 Disallow: /admin/
 
 Sitemap: https://ybycompiler.netlify.app/sitemap.xml
-Sitemap: https://compiler.github.io/sitemap.xml
 
-# Allow Google AdSense crawlers
-User-agent: Googlebot-Image
+# Allow Google and Bing
+User-agent: Googlebot
 Allow: /
-
 User-agent: Bingbot
 Allow: /
-
-# Respect crawl delay
-Crawl-delay: 1
