@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="YBY Compiler">
   <meta name="google-adsense-account" content="ca-pub-8709136418584975">
@@ -8,7 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Master Python if-else conditions: learn decision making in Python with if, elif, and else statements. Comprehensive beginner's guide.">
   <title>Python If-Else Conditions | Decision Making | YBY Compiler</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <link rel="canonical" href="https://ybycompiler.netlify.app/python-conditions.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,5 +175,50 @@
       </footer>
     </main>
   </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Writing Real Decision Rules</h2>
+    <p>Conditionals turn a script into a program that reacts to different situations. For example, a grading program can decide whether a student passed, needs review, or earned an excellent score. The key is to write conditions in an order that makes sense.</p>
+    <pre><code>score = 86
+
+if score >= 90:
+    print("Excellent")
+elif score >= 60:
+    print("Passed")
+else:
+    print("Needs more practice")</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Using <code>=</code> instead of <code>==</code> for comparison.</li><li>Putting broad conditions before specific conditions.</li><li>Forgetting indentation under <code>if</code>, <code>elif</code>, or <code>else</code>.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Write a program that checks if a number is positive, negative, or zero.</li><li>Create a discount rule based on a customer's purchase total.</li><li>Check if a password is long enough and contains no spaces.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>Can I have more than one <code>elif</code>?</strong> Yes. Use as many as needed, but keep the order clear.</p>
+    <p><strong>Does <code>else</code> need a condition?</strong> No. It runs when previous conditions are false.</p>
+    <p><strong>Related links:</strong> <a href="python-loops.html">Python Loops</a>, <a href="python-errors.html">Common Python Errors</a>, <a href="index.html#compiler">Try examples online</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Conditions are best learned by testing both true and false cases. Write small rules first, then combine them into larger programs.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Condition practice checklist</h2>
+    <p>Practice conditions by checking grades, login status, temperature, and discount rules. Write the simplest condition first, then add <code>elif</code> branches only when the program really has more than two outcomes.</p><ul><li>Use comparison operators carefully.</li><li>Keep indentation consistent.</li><li>Test true and false cases so every branch is checked.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

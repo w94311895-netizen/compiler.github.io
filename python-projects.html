@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beginner Python Projects</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <link rel="stylesheet" href="styles.css?v=20260616">
   <meta name="description" content="Learn Python by building real-world beginner-friendly projects. Calculator, games, and more.">
   <meta name="keywords" content="Python projects, beginner projects, learning by doing">
@@ -79,7 +83,7 @@ while not guessed:
     try:
         guess = int(input("Guess a number (1-100): "))
         attempts += 1
-        
+
         if guess < secret_number:
             print("Too low! Try again.")
         elif guess > secret_number:
@@ -124,9 +128,9 @@ while True:
     print("2. View tasks")
     print("3. Remove task")
     print("4. Exit")
-    
+
     choice = input("Choose an option: ")
-    
+
     if choice == '1':
         task = input("Enter task: ")
         add_task(task)
@@ -158,16 +162,16 @@ import random
 def play_game():
     choices = ['rock', 'paper', 'scissors']
     computer_choice = random.choice(choices)
-    
+
     user_choice = input("Enter rock, paper, or scissors: ").lower()
-    
+
     if user_choice not in choices:
         print("Invalid choice!")
         return
-    
+
     print(f"You chose: {user_choice}")
     print(f"Computer chose: {computer_choice}")
-    
+
     if user_choice == computer_choice:
         print("It's a tie!")
     elif (user_choice == 'rock' and computer_choice == 'scissors') or \
@@ -194,38 +198,38 @@ while True:
 def check_password_strength(password):
     strength = 0
     feedback = []
-    
+
     # Length check
     if len(password) >= 8:
         strength += 1
     else:
         feedback.append("- At least 8 characters")
-    
+
     # Uppercase check
     if any(c.isupper() for c in password):
         strength += 1
     else:
         feedback.append("- At least one uppercase letter")
-    
+
     # Lowercase check
     if any(c.islower() for c in password):
         strength += 1
     else:
         feedback.append("- At least one lowercase letter")
-    
+
     # Digit check
     if any(c.isdigit() for c in password):
         strength += 1
     else:
         feedback.append("- At least one digit")
-    
+
     # Special character check
     special_chars = "!@#$%^&*()_+-=[]{}|;:,.<>?"
     if any(c in special_chars for c in password):
         strength += 1
     else:
         feedback.append("- At least one special character")
-    
+
     # Determine strength level
     if strength == 1:
         level = "Very Weak"
@@ -237,7 +241,7 @@ def check_password_strength(password):
         level = "Strong"
     else:
         level = "Very Strong"
-    
+
     return level, feedback
 
 password = input("Enter password to check: ")
@@ -275,7 +279,7 @@ while True:
     name = input("Enter student name (or 'done' to finish): ")
     if name.lower() == 'done':
         break
-    
+
     grades = []
     while True:
         try:
@@ -288,7 +292,7 @@ while True:
                 print("Grade must be between 0 and 100!")
         except ValueError:
             print("Invalid input!")
-    
+
     if grades:
         average = sum(grades) / len(grades)
         letter = get_letter_grade(average)
@@ -321,5 +325,47 @@ for name, data in students.items():
 
   <a href="index.html" class="back-link">← Back to Home</a>
 </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: How to Finish a Beginner Project</h2>
+    <p>A beginner project should be small enough to finish but flexible enough to improve. Start with one feature, test it, then add another feature. For example, a calculator can begin with addition, then add subtraction, validation, and a repeat menu.</p>
+    <pre><code>def add(a, b):
+    return a + b
+
+print("Mini Calculator")
+print(add(4, 6))</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Starting with a project that is too large.</li><li>Copying code without changing or testing it.</li><li>Not handling invalid input, such as blank text or division by zero.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Add input validation to the calculator project.</li><li>Add a score counter to the guessing game.</li><li>Turn repeated project code into functions.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>How many projects should I build?</strong> Build many small projects before trying one big app.</p>
+    <p><strong>Should I customize copied examples?</strong> Yes. Customizing proves you understand the code.</p>
+    <p><strong>Related links:</strong> <a href="python-functions.html">Functions</a>, <a href="python-loops.html">Loops</a>, <a href="python-errors.html">Debugging</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Projects connect separate lessons into real skills. Finish small projects, improve them, and keep notes about what you learned.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Project learning checklist</h2>
+    <p>After copying a project, change it. Add one feature, rename variables, improve messages, and test invalid input. Real learning happens when you modify the code and understand why your change works.</p><ul><li>Write the goal of the project in one sentence.</li><li>Break the project into small functions.</li><li>Test normal input and wrong input before sharing it.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

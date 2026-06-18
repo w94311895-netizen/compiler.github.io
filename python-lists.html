@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <meta name="author" content="YBY Compiler">
   <meta name="google-adsense-account" content="ca-pub-8709136418584975">
   <title>Python Lists - Comprehensive Tutorial</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <link rel="canonical" href="https://ybycompiler.netlify.app/python-lists.html">
   <link rel="stylesheet" href="styles.css?v=20260616">
   <meta name="description" content="Master Python lists: learn how to create, access, modify, and work with lists of data.">
@@ -237,5 +241,47 @@ print(uppercase_fruits)  # ['APPLE', 'BANANA', 'ORANGE']
   <a href="blog.html" class="back-link">← Back to Blog</a>
   <a href="index.html" class="back-link">← Back to Home</a>
 </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Managing Collections with Lists</h2>
+    <p>Lists are perfect when you need to store many related values in order. You can add items, remove items, sort values, and loop through the collection. Lists are common in quizzes, shopping carts, score trackers, and task apps.</p>
+    <pre><code>tasks = ["study variables", "practice loops", "build a project"]
+tasks.append("review errors")
+
+for number, task in enumerate(tasks, start=1):
+    print(f"{number}. {task}")</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Forgetting that indexes start at 0.</li><li>Using an index that is outside the list range.</li><li>Confusing <code>append()</code>, which adds one item, with <code>extend()</code>, which adds multiple items.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Create a list of five favorite foods and print each one.</li><li>Remove one item and add a new item.</li><li>Find the largest number in a list of scores.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>Can lists store different types?</strong> Yes, but related values usually make code clearer.</p>
+    <p><strong>Are lists changeable?</strong> Yes. Lists are mutable, so you can update them.</p>
+    <p><strong>Related links:</strong> <a href="python-loops.html">Loops</a>, <a href="python-data-types.html">Data Types</a>, <a href="python-projects.html">Projects</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Lists let you work with groups of data. Practice indexing, looping, and methods until list operations feel comfortable.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>List practice checklist</h2>
+    <p>Practice lists by storing shopping items, test scores, and project tasks. Add new values, remove old values, sort the list, and loop through every item to print a useful message.</p><ul><li>Use indexes when you need a specific position.</li><li>Use loops when you need every item.</li><li>Use list methods such as <code>append</code>, <code>remove</code>, and <code>sort</code>.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

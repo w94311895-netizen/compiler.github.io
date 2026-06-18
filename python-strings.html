@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <meta name="author" content="YBY Compiler">
   <meta name="google-adsense-account" content="ca-pub-8709136418584975">
   <title>Python Strings - Comprehensive Tutorial</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <link rel="canonical" href="https://ybycompiler.netlify.app/python-strings.html">
   <link rel="stylesheet" href="styles.css?v=20260616">
   <meta name="description" content="Master Python strings: learn string creation, manipulation, methods, and formatting.">
@@ -250,5 +254,46 @@ message = "{} {}".format(first_name, last_name)
   <a href="blog.html" class="back-link">← Back to Blog</a>
   <a href="index.html" class="back-link">← Back to Home</a>
 </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Cleaning and Formatting Text</h2>
+    <p>Strings appear in names, messages, file paths, emails, and user input. Real programs often need to clean text before using it. Python string methods help you remove spaces, change case, search text, and build friendly output.</p>
+    <pre><code>raw_name = "  maya johnson  "
+clean_name = raw_name.strip().title()
+message = f"Welcome, {clean_name}!"
+print(message)</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Forgetting that string methods return a new string.</li><li>Mixing quotes incorrectly inside another quoted string.</li><li>Trying to change one character directly even though strings are immutable.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Clean extra spaces from a username and convert it to lowercase.</li><li>Use an f-string to print a receipt line with item name and price.</li><li>Check whether an email string contains <code>@</code>.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>What does immutable mean?</strong> It means the original string cannot be changed in place.</p>
+    <p><strong>Should I use f-strings?</strong> Yes. They are clear and beginner-friendly for formatting values.</p>
+    <p><strong>Related links:</strong> <a href="python-variables.html">Variables</a>, <a href="python-errors.html">Common Errors</a>, <a href="index.html#compiler">Run string examples</a>.</p>
+    <h3>Conclusion</h3>
+    <p>String skills make programs feel polished. Practice cleaning, slicing, searching, and formatting text in small examples.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>String practice checklist</h2>
+    <p>Practice strings by formatting names, cleaning extra spaces, checking email text, and building friendly messages with f-strings. Strings are common in user input, file names, labels, and error messages.</p><ul><li>Use <code>strip()</code> to clean user input.</li><li>Use f-strings to combine text and values.</li><li>Remember that strings are immutable, so methods return new strings.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

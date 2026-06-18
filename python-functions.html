@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -8,7 +13,6 @@
     <meta name="google-adsense-account" content="ca-pub-8709136418584975">
     <meta name="description" content="Python Functions Tutorial - Create and use reusable code blocks">
     <title>Python Functions Tutorial | YBY Compiler</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
     <link rel="canonical" href="https://ybycompiler.netlify.app/python-functions.html">
     <link rel="stylesheet" href="styles.css?v=20260616">
     <script type="application/ld+json">
@@ -127,11 +131,11 @@ print_info(name="Alice", age=30, city="NYC")</pre>
             <pre>def calculate_area(length, width):
     """
     Calculate the area of a rectangle.
-    
+
     Parameters:
     length (float): The length of the rectangle
     width (float): The width of the rectangle
-    
+
     Returns:
     float: The area of the rectangle
     """
@@ -216,5 +220,48 @@ print(add(3, 4))  # 7</pre>
         <a href="blog.html" class="back-link">← Back to Blog</a>
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Turning Repeated Code into Functions</h2>
+    <p>Functions make programs easier to read because they give a name to a task. If you repeat the same calculation or message several times, that code is a strong candidate for a function. A good function has a clear name, clear parameters, and a useful return value.</p>
+    <pre><code>def calculate_average(scores):
+    total = sum(scores)
+    return total / len(scores)
+
+quiz_scores = [80, 90, 75]
+print(calculate_average(quiz_scores))</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Printing inside a function when the rest of the program needs a returned value.</li><li>Using unclear names such as <code>do_stuff</code>.</li><li>Making one function responsible for too many different tasks.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Write a function that converts Celsius to Fahrenheit.</li><li>Write a function that returns whether a score is passing.</li><li>Write a function that formats a first and last name.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>Can a function return more than one value?</strong> Yes. Python can return multiple values as a tuple.</p>
+    <p><strong>Do all functions need parameters?</strong> No. Some functions do not need outside input.</p>
+    <p><strong>Related links:</strong> <a href="python-variables.html">Variables</a>, <a href="python-loops.html">Loops</a>, <a href="python-projects.html">Python Projects</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Functions help you organize code into reusable building blocks. Start with small functions and combine them as your projects grow.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Function practice checklist</h2>
+    <p>Practice functions by writing small helpers: calculate an average, format a name, check whether a score passes, and convert minutes to hours. Good functions solve one clear problem and return a useful result.</p><ul><li>Name functions with verbs, such as <code>calculate_total</code>.</li><li>Keep input values in parameters instead of hard-coding them.</li><li>Return values when other code needs the result.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

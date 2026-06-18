@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -8,7 +13,6 @@
   <meta name="google-adsense-account" content="ca-pub-8709136418584975">
   <meta name="description" content="Learn how to understand and fix common Python errors including SyntaxError, NameError, TypeError, ValueError, IndentationError, and FileNotFoundError.">
   <meta name="keywords" content="Python errors, fix Python SyntaxError, Python NameError, Python TypeError, Python beginner debugging, YBY Compiler">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <link rel="canonical" href="https://ybycompiler.netlify.app/python-errors.html">
   <title>Common Python Errors and Fixes | YBY Compiler</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,5 +101,49 @@ print(df.head())</pre>
     <p><a href="blog.html" class="back-link">← Back to Blog</a></p>
     <p><a href="index.html" class="back-link">← Back to Home</a></p>
   </main>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: A Debugging Routine for Beginners</h2>
+    <p>Debugging is easier when you follow the same routine every time. Read the first error message, find the line number, inspect spelling and indentation, then run the program again after one small fix. Avoid changing many lines at once because that can hide the real cause.</p>
+    <pre><code># Problem
+age = "15"
+print(age + 1)
+
+# Fix
+age = int("15")
+print(age + 1)</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Only reading the last line of a long error message.</li><li>Ignoring the line number shown by Python.</li><li>Fixing many things at once instead of testing one change.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Create and fix a missing-colon <code>SyntaxError</code>.</li><li>Create and fix a misspelled variable <code>NameError</code>.</li><li>Create and fix a string-plus-number <code>TypeError</code>.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>Are errors bad?</strong> No. Errors are feedback that helps you improve the program.</p>
+    <p><strong>Which error should I fix first?</strong> Usually fix the first error Python reports.</p>
+    <p><strong>Related links:</strong> <a href="python-exceptions.html">Exceptions</a>, <a href="python-tips.html">Best Practices</a>, <a href="index.html#compiler">Test fixes online</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Every programmer sees errors. A calm debugging routine turns error messages into useful learning steps.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Debugging practice checklist</h2>
+    <p>Practice debugging by intentionally creating a missing colon, an undefined variable, a type mismatch, and a bad number conversion. Read the first error line, find the line number, then make one fix at a time.</p><ul><li>Start with the first error, not the last message.</li><li>Check spelling, indentation, and data types.</li><li>Run small sections of code often to catch problems early.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

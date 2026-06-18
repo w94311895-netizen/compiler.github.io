@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -8,7 +13,6 @@
     <meta name="google-adsense-account" content="ca-pub-8709136418584975">
     <meta name="description" content="Python Data Types Tutorial - Master strings, lists, dictionaries, and more">
     <title>Python Data Types Tutorial | YBY Compiler</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
     <link rel="canonical" href="https://ybycompiler.netlify.app/python-data-types.html">
     <link rel="stylesheet" href="styles.css?v=20260616">
     <script type="application/ld+json">
@@ -203,5 +207,49 @@ print(numbers)</pre>
         <a href="blog.html" class="back-link">← Back to Blog</a>
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Choosing the Right Data Type</h2>
+    <p>Good Python code starts with choosing the right kind of value. A username should be a string, an item count should be an integer, a price can be a float, and a login state should be a boolean. When data types match the real-world meaning of the data, your program needs fewer fixes later.</p>
+    <pre><code>product_name = "Notebook"
+quantity = 3
+price = 4.99
+in_stock = True
+
+total = quantity * price
+print(f"{quantity} {product_name}s cost ${total}")</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Trying to add a string directly to a number.</li><li>Forgetting that input from users starts as text.</li><li>Using a list when a dictionary would describe named values more clearly.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Create a dictionary for a movie with title, year, rating, and watched status.</li><li>Convert a text number such as <code>"42"</code> into an integer and add 8.</li><li>Build a list of three prices and calculate their sum.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>How do I check a value's type?</strong> Use <code>type(value)</code>.</p>
+    <p><strong>Why does user input behave like text?</strong> The <code>input()</code> function returns a string so you can decide how to convert it.</p>
+    <p><strong>Related links:</strong> <a href="python-variables.html">Python Variables</a>, <a href="python-lists.html">Python Lists</a>, <a href="python-errors.html">Python Errors</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Data types help Python understand what operations are allowed. Choose types intentionally and convert values before doing calculations.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Data type practice checklist</h2>
+    <p>Practice choosing the correct data type for each situation. Use strings for names, integers for counts, floats for prices, booleans for yes/no states, lists for ordered collections, and dictionaries for named information.</p><ul><li>Check a value with <code>type(value)</code> when you are unsure.</li><li>Convert input text before doing math.</li><li>Choose the simplest data type that clearly represents the data.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

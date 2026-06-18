@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -8,7 +13,6 @@
     <meta name="google-adsense-account" content="ca-pub-8709136418584975">
     <meta name="description" content="Python Variables Tutorial - Learn how to create and use variables in Python">
     <title>Python Variables Tutorial | YBY Compiler</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
     <link rel="canonical" href="https://ybycompiler.netlify.app/python-variables.html">
     <link rel="stylesheet" href="styles.css?v=20260616">
     <script type="application/ld+json">
@@ -135,5 +139,50 @@ print(f"GPA: {gpa}")</pre>
         <a href="blog.html" class="back-link">← Back to Blog</a>
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Building a Student Profile with Variables</h2>
+    <p>A useful way to understand variables is to build a small student profile. Each value has a purpose: text stores names, numbers store scores, and booleans store yes-or-no states. When you choose clear variable names, the program becomes easier to read and easier to debug later.</p>
+    <pre><code>student_name = "Ava"
+student_age = 16
+math_score = 88
+english_score = 91
+is_enrolled = True
+
+average_score = (math_score + english_score) / 2
+print(f"{student_name} average: {average_score}")</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Using names like <code>x</code> and <code>y</code> when the value has a real meaning.</li><li>Putting numbers inside quotes and then wondering why math does not work.</li><li>Changing capitalization, such as using <code>Score</code> in one place and <code>score</code> in another.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Create variables for a book title, author, page count, and whether you finished reading it.</li><li>Calculate the total cost of three products using separate price variables.</li><li>Print a friendly sentence using an f-string and at least three variables.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>Do I need to declare a variable type in Python?</strong> No. Python detects the type from the value you assign.</p>
+    <p><strong>Can a variable value change?</strong> Yes. Reassigning a variable gives it a new value.</p>
+    <p><strong>Related links:</strong> <a href="python-data-types.html">Python Data Types</a>, <a href="python-strings.html">Python Strings</a>, <a href="index.html#compiler">Practice in the compiler</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Variables are the foundation of readable Python programs. Focus on clear names, correct data types, and small practice examples until using variables feels natural.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Variables practice checklist</h2>
+    <p>Before moving on, practice creating variables for a name, age, price, score, and login status. Print each value, then change one value and print it again. This helps you understand that variables are labels pointing to current data.</p><ul><li>Use clear names such as <code>student_name</code> instead of single letters.</li><li>Keep number values as numbers when you need math.</li><li>Use strings for text that should be displayed to users.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -8,7 +13,6 @@
     <meta name="google-adsense-account" content="ca-pub-8709136418584975">
     <meta name="description" content="Python Loops Tutorial - Learn for loops and while loops">
     <title>Python Loops Tutorial | YBY Compiler</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
     <link rel="canonical" href="https://ybycompiler.netlify.app/python-loops.html">
     <link rel="stylesheet" href="styles.css?v=20260616">
     <script type="application/ld+json">
@@ -198,5 +202,50 @@ print(max_num)</pre>
         <a href="blog.html" class="back-link">← Back to Blog</a>
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Repeating Work Safely</h2>
+    <p>Loops are useful when a task must happen many times. A loop can print every item in a list, ask again until input is valid, or calculate totals from repeated values. The best loops are easy to stop and easy to understand.</p>
+    <pre><code>scores = [72, 85, 90, 68]
+total = 0
+
+for score in scores:
+    total += score
+
+average = total / len(scores)
+print(f"Average score: {average}")</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Creating a <code>while</code> loop that never changes its condition.</li><li>Using the wrong indentation for the repeated block.</li><li>Changing a list while looping over it without understanding the effect.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Print every name in a list with a greeting.</li><li>Use <code>range()</code> to print even numbers from 2 to 20.</li><li>Use a <code>while</code> loop that stops when the user enters <code>quit</code>.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>When should I use <code>for</code>?</strong> Use it when you have a known sequence.</p>
+    <p><strong>When should I use <code>while</code>?</strong> Use it when repetition depends on a condition.</p>
+    <p><strong>Related links:</strong> <a href="python-lists.html">Python Lists</a>, <a href="python-functions.html">Python Functions</a>, <a href="python-errors.html">Debugging Errors</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Loops reduce repetition and make programs more powerful. Always test your stopping condition so your loop does not run forever.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Loop practice checklist</h2>
+    <p>Practice loops by printing numbers, looping through a list of names, and repeating a question until the user gives valid input. A good loop has a clear start, a clear stopping condition, and code that changes the condition when needed.</p><ul><li>Use <code>for</code> when you know the sequence to repeat over.</li><li>Use <code>while</code> when repetition depends on a condition.</li><li>Always check that a <code>while</code> loop can eventually stop.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>

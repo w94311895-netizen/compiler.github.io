@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Python Best Practices & Tips</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <link rel="stylesheet" href="styles.css?v=20260616">
   <meta name="description" content="Learn Python best practices and pro tips to write clean, efficient, and professional code.">
   <meta name="keywords" content="Python tips, best practices, clean code, professional Python">
@@ -58,11 +62,11 @@ def calc(x, y):
 def calculate_student_score(test_score, assignment_score):
     """
     Calculate final student score based on test and assignment.
-    
+
     Args:
         test_score: Score on the test (0-100)
         assignment_score: Score on assignment (0-100)
-    
+
     Returns:
         Average of test and assignment scores
     """
@@ -301,5 +305,52 @@ if age > MIN_AGE_REQUIREMENT and height > MIN_HEIGHT_REQUIREMENT:
 
   <a href="index.html" class="back-link">← Back to Home</a>
 </div>
+
+
+
+  <section class="content-depth-section">
+    <h2>Deep Practice: Reviewing Code Like a Developer</h2>
+    <p>After your program works, read it again like another person will maintain it. Good code uses clear names, simple functions, consistent formatting, and helpful comments only where they add understanding. This review habit makes your projects stronger.</p>
+    <pre><code># Before
+x = 10
+y = 3
+print(x * y)
+
+# After
+item_price = 10
+item_count = 3
+total_cost = item_price * item_count
+print(total_cost)</code></pre>
+    <h3>Common mistakes</h3>
+    <ul><li>Writing clever code that is hard to explain.</li><li>Leaving old unused code in the file.</li><li>Using comments to explain confusing code instead of making the code clearer.</li></ul>
+    <h3>Practice exercises</h3>
+    <ol><li>Rename five unclear variables in an old program.</li><li>Split a long script into two or three functions.</li><li>Add comments only where the reason for the code is not obvious.</li></ol>
+    <h3>FAQ</h3>
+    <p><strong>Does clean code matter for beginners?</strong> Yes. Clean habits make debugging easier from the start.</p>
+    <p><strong>Should every line have a comment?</strong> No. Clear code usually needs fewer comments.</p>
+    <p><strong>Related links:</strong> <a href="python-functions.html">Functions</a>, <a href="python-errors.html">Errors</a>, <a href="python-projects.html">Projects</a>.</p>
+    <h3>Conclusion</h3>
+    <p>Best practices are not only for experts. Small habits like naming, formatting, and review help every Python learner write better programs.</p>
+  </section>
+
+<section class="editorial-note">
+    <h2>Clean code practice checklist</h2>
+    <p>Good Python code is readable before it is clever. Review your code after it works: rename unclear variables, remove repeated lines, add helpful comments, and split long logic into functions.</p><ul><li>Use consistent formatting.</li><li>Prefer simple code that a beginner can explain.</li><li>Keep practicing with small improvements on every program.</li></ul>
+  </section>
+<nav class="trust-nav" aria-label="YBY Compiler trust and policy links">
+    <h3>YBY Compiler trust links</h3>
+    <p>Find the compiler, learning resources, ownership details, privacy information, terms, and contact options from one place.</p>
+    <div class="trust-links">
+      <a href="/">Home</a>
+      <a href="/#compiler">Compiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="adsense-readiness.html">Site Readiness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
 </body>
 </html>
