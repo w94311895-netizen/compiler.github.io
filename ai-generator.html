@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#ffb238">
-<meta name="robots" content="noindex, nofollow">
-<title>AI Article Generator</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Internal draft helper for YBY Compiler article planning. This utility is not intended for search indexing.">
+  <title>AI Article Generator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<div class="blog-container">
+  <main class="blog-container">
+    <h1>AI Blog Generator</h1>
+    <p class="section-text">Internal draft helper for planning article outlines. This page is intentionally marked noindex so search engines focus on published tutorials.</p>
 
-<h1>AI Blog Generator</h1>
+    <label for="topic">Article topic</label>
+    <input id="topic" placeholder="Enter topic..." style="width:100%;padding:10px;margin:10px 0;">
 
-<input id="topic" placeholder="Enter topic..."
- style="width:100%;padding:10px;margin:10px 0;">
+    <button onclick="generate()" type="button">Generate Article</button>
 
-<button onclick="generate()">Generate Article</button>
+    <pre id="output"></pre>
+  </main>
 
-<pre id="output"></pre>
-
-</div>
-
-<script>
-function generate() {
-  const topic = document.getElementById("topic").value;
-
-  const article = `
+  <script>
+    function generate() {
+      const topic = document.getElementById("topic").value.trim() || "Python practice";
+      const article = `
 # ${topic}
 
 ${topic} is an important concept in Python.
@@ -44,9 +44,8 @@ print("Learning ${topic}")
 Practice ${topic} to improve your coding skills.
 `;
 
-  document.getElementById("output").textContent = article;
-}
-</script>
-
+      document.getElementById("output").textContent = article;
+    }
+  </script>
 </body>
 </html>
