@@ -2,28 +2,30 @@
 
 This repository is private, which is fine. Google reviews the **deployed public website**, not the private Git repository.
 
-## Issues to fix before applying
+## Current approval-readiness status
 
-1. **Replace placeholder publisher IDs**
-   - `index.html` currently uses `ca-pub-XXXXXXXXXXXXXXXX`.
-   - `ads.txt` currently uses `pub-XXXXXXXXXXXXXXXX`.
-   - After AdSense gives you your publisher ID, replace both placeholders with your real ID.
+1. **Publisher ID is configured**
+   - HTML pages use the AdSense account meta tag `ca-pub-8709136418584975`.
+   - `ads.txt` uses `pub-8709136418584975`.
 
-2. **Replace placeholder domain values**
-   - `robots.txt`, `sitemap.xml`, and structured data in HTML files still use placeholder domains.
-   - Use your real Netlify URL, for example `https://your-site-name.netlify.app`, or your custom domain if you buy one.
+2. **Public domain values are configured**
+   - Canonical URLs, `robots.txt`, `sitemap.xml`, and structured data point to `https://ybycompiler.netlify.app/`.
 
-3. **Keep required public pages accessible**
+3. **Live ad units are intentionally not shown before approval**
+   - Do not use fake or placeholder `data-ad-slot` values.
+   - After AdSense approves the site, create real ad units in AdSense or enable Auto ads, then add the official code from your AdSense dashboard.
+
+4. **Keep required public pages accessible**
    - Privacy Policy: `/privacy.html`
    - Terms and Conditions: `/terms.html`
    - Contact page: `/contact.html`
    - Blog/tutorial content pages
 
-4. **Publish enough original content**
+5. **Publish enough original content**
    - AdSense is more likely to approve sites that have useful, original content and clear navigation.
    - Add more Python tutorials, examples, and project pages before applying if the site still feels thin.
 
-5. **Avoid fake ad clicks or invalid traffic**
+6. **Avoid fake ad clicks or invalid traffic**
    - Never click your own ads.
    - Do not ask friends, bots, or social media groups to click ads.
    - Invalid traffic can close your AdSense account.
@@ -41,10 +43,8 @@ This repository is private, which is fine. Google reviews the **deployed public 
    - `/contact.html`
 3. Create or sign in to Google AdSense: <https://www.google.com/adsense/start/>.
 4. Add your website URL. Use the public Netlify URL or your custom domain.
-5. Copy your AdSense publisher ID and replace:
-   - `ca-pub-XXXXXXXXXXXXXXXX` in `index.html`
-   - `pub-XXXXXXXXXXXXXXXX` in `ads.txt`
-6. In Netlify, redeploy the site after those replacements.
+5. Confirm AdSense detects the account meta tag and `ads.txt`.
+6. In Netlify, redeploy the latest site.
 7. In AdSense, request review.
 8. Wait for Google approval. This can take days or longer.
 9. After approval, create ad units in AdSense or enable Auto ads.
