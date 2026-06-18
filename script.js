@@ -1885,23 +1885,6 @@ function initializeRevealAnimations() {
 }
 
 /* ==========================================================
-   ADSENSE
-   ========================================================== */
-
-function initializeAds() {
-
-  try {
-
-    (
-      window.adsbygoogle =
-        window.adsbygoogle ||
-        []
-    ).push({});
-
-  } catch {}
-}
-
-/* ==========================================================
    KEYBOARD SHORTCUTS
    ========================================================== */
 
@@ -1949,8 +1932,6 @@ async function initializeApplication() {
     loadSavedCode();
 
     initializeRevealAnimations();
-
-    initializeAds();
 
     clearVisualization();
 
