@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffb238">
   <!-- PRIMARY FAVICON - SVG -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260616">
   <!-- FALLBACK FAVICON - PNG -->
-  <link rel="apple-touch-icon" href="/IMG-20260614-WA0005.jpg?v=20260616">
   <!-- META VERIFICATION & ROBOTS -->
   <meta name="google-site-verification" content="irns9p1zsea1-LLhPKTuaA0Zp2EYczPNdZ_huAEwixE">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -17,30 +20,19 @@
   <meta name="description" content="YBY Compiler is a free browser-based compiler for Python, C, C++, and Java. Run code instantly with clear error explanations, data visualization, and comprehensive beginner tutorials.">
   <!-- TITLE & CANONICAL -->
   <title>YBY Compiler | Free Online Compiler for Python, C, C++, Java</title>
-  <link rel="canonical" id="canonicalTag" href="/">
+  <link rel="canonical" id="canonicalTag" href="https://ybycompiler.netlify.app/">
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="YBY Compiler | Free Online Compiler for Python, C, C++, Java">
   <meta property="og:description" content="Run Python, C, C++, and Java online for free. Visualize data science charts and get plain-English error help for beginner-friendly coding practice.">
   <meta property="og:site_name" content="YBY Compiler">
-  <meta property="og:image" content="/python-concepts.png?v=20260616">
+  <meta property="og:image" content="https://ybycompiler.netlify.app/favicon.svg">
   <meta property="og:url" content="https://ybycompiler.netlify.app/">
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="YBY Compiler | Free Online Compiler for Python, C, C++, Java">
   <meta name="twitter:description" content="Free online compiler for Python, C, C++, and Java. Data science charts, file uploads, and plain-English error explanations.">
-  <!-- CANONICAL & OG:URL DYNAMIC -->
-  <script>
-    (function(){
-      var origin = window.location.origin;
-      var path = window.location.pathname;
-      var full = origin + (path === "/" ? "/" : path);
-      document.getElementById("canonicalTag").href = full;
-      var ogUrl = document.querySelector('meta[property="og:url"]');
-      if(!ogUrl){ ogUrl = document.createElement("meta"); ogUrl.setAttribute("property","og:url"); document.head.appendChild(ogUrl); }
-      ogUrl.content = full;
-    })();
-  </script>
+  <!-- Canonical and social URLs intentionally point to the primary Netlify domain for search indexing. -->
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +46,10 @@
     "@type": ["WebSite", "SoftwareApplication"],
     "name": "YBY Compiler",
     "url": "https://ybycompiler.netlify.app/",
+    "alternateName": ["YBY Compiler", "YBY online compiler", "YBY copiler"],
+    "image": "https://ybycompiler.netlify.app/favicon.svg",
+    "logo": "https://ybycompiler.netlify.app/favicon.svg",
+    "sameAs": ["https://w94311895-netizen.github.io/compiler.github.io/"],
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Any",
     "description": "Free online compiler for Python, C, C++, and Java. Run data science code with matplotlib, seaborn, pandas, NumPy and scikit-learn. Beginner-friendly error explanations.",
